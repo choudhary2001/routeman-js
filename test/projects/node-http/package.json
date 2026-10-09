@@ -1,0 +1,18 @@
+{
+  "name": "node-http-todos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Todo API on bare node:http, no framework",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2"
+  }
+}

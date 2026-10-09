@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "routeman configuration",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string", "description": "Collection name" },
+    "framework": { "type": "string", "description": "auto (default) or a framework id: express, fastify, nest, koa, hono, elysia, hapi, next, nuxt, sveltekit, astro, adonis, ..." },
+    "entry": { "type": ["string", "array"], "items": { "type": "string" }, "description": "Entry file(s), e.g. src/server.ts" },
+    "output": { "type": "string", "default": "postman" },
+    "environments": { "type": "object", "additionalProperties": { "type": "string" }, "description": "One Postman environment per entry: { \"local\": \"http://localhost:3000\" }" },
+    "exclude": { "type": "array", "items": { "type": "string" }, "description": "Regular expressions of paths to leave out" },
+    "auth": {
+      "type": "object",
+      "properties": {
+        "type": { "enum": ["auto", "none", "bearer", "token", "basic", "apikey", "header", "session"] },
+        "login": { "type": "string", "description": "POST path whose response contains the token" },
+        "prefix": { "type": "string", "description": "Authorization: <prefix> <token>" },
+        "header": { "type": "string", "description": "Header for apikey / header auth" }
+      }
+    },
+    "envFile": { "type": "string" },
+    "openapi": { "type": "string", "description": "Build from this OpenAPI file or URL instead of the source code" }
+  }
+}

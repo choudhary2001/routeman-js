@@ -1,0 +1,13 @@
+{
+  "tasks": {
+    "start": "deno run -A main.ts",
+    "dev": "deno run -A --watch main.ts"
+  },
+  "imports": {
+    "@oak/oak": "jsr:@oak/oak@^17.1.4",
+    "djwt": "jsr:@zaubrik/djwt@^3.0.2"
+  },
+  "fmt": {
+    "lineWidth": 100
+  }
+}

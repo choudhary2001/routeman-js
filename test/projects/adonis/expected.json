@@ -1,0 +1,16 @@
+[
+  { "method": "GET", "path": "/health", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/auth/login", "auth": false, "body": ["email", "password"], "query": [], "login": true },
+  { "method": "POST", "path": "/api/auth/register", "auth": false, "body": ["fullName", "email", "password", "password_confirmation"], "query": [] },
+  { "method": "GET", "path": "/api/auth/me", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/users", "auth": true, "body": null, "query": ["page", "search"] },
+  { "method": "POST", "path": "/api/users", "auth": true, "body": ["fullName", "email", "password", "password_confirmation"], "query": [] },
+  { "method": "GET", "path": "/api/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "DELETE", "path": "/api/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/posts", "auth": true, "body": null, "query": ["page", "perPage", "status"] },
+  { "method": "POST", "path": "/api/posts", "auth": true, "body": ["title", "content", "status"], "query": [] },
+  { "method": "GET", "path": "/api/posts/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "PUT", "path": "/api/posts/{id}", "auth": true, "body": ["title", "content", "status"], "query": [] },
+  { "method": "PATCH", "path": "/api/posts/{id}", "auth": true, "body": ["title", "content", "status"], "query": [] },
+  { "method": "DELETE", "path": "/api/posts/{id}", "auth": true, "body": null, "query": [] }
+]

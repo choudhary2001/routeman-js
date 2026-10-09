@@ -1,0 +1,30 @@
+[
+  { "method": "GET", "path": "/health", "auth": false, "body": null, "query": [] },
+
+  { "method": "POST", "path": "/api/v1/auth/register", "auth": false, "body": ["name", "username", "email", "password"], "query": [] },
+  { "method": "POST", "path": "/api/v1/auth/login", "auth": false, "body": ["email", "password"], "query": [], "login": true },
+  { "method": "POST", "path": "/api/v1/auth/refresh-token", "auth": false, "body": ["refreshToken"], "query": [] },
+  { "method": "GET", "path": "/api/v1/auth/me", "auth": true, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/v1/auth/logout", "auth": true, "body": ["refreshToken"], "query": [] },
+
+  { "method": "GET", "path": "/api/v1/users", "auth": true, "body": null, "query": ["page", "limit", "role", "search"] },
+  { "method": "POST", "path": "/api/v1/users", "auth": true, "body": ["username", "email", "password", "name", "role"], "query": [] },
+  { "method": "GET", "path": "/api/v1/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "PUT", "path": "/api/v1/users/{id}", "auth": true, "body": ["name", "username", "email", "role"], "query": [] },
+  { "method": "DELETE", "path": "/api/v1/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/v1/users/{id}/avatar", "auth": true, "body": ["avatar"], "query": [] },
+
+  { "method": "GET", "path": "/api/v1/products", "auth": false, "body": null, "query": ["page", "limit", "sort", "category", "search", "minPrice", "maxPrice"] },
+  { "method": "POST", "path": "/api/v1/products", "auth": true, "body": ["name", "description", "price", "category", "stock"], "query": [] },
+  { "method": "GET", "path": "/api/v1/products/{id}", "auth": false, "body": null, "query": [] },
+  { "method": "PUT", "path": "/api/v1/products/{id}", "auth": true, "body": ["name", "description", "price", "category", "stock"], "query": [] },
+  { "method": "DELETE", "path": "/api/v1/products/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/v1/products/{id}/reviews", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/v1/products/{id}/reviews", "auth": true, "body": ["rating", "comment"], "query": [] },
+
+  { "method": "GET", "path": "/api/v1/orders", "auth": true, "body": null, "query": ["status", "page", "limit"] },
+  { "method": "POST", "path": "/api/v1/orders", "auth": true, "body": ["items", "shippingAddress", "paymentMethod", "notes"], "query": [] },
+  { "method": "GET", "path": "/api/v1/orders/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "DELETE", "path": "/api/v1/orders/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "PATCH", "path": "/api/v1/orders/{id}/status", "auth": true, "body": ["status"], "query": [] }
+]

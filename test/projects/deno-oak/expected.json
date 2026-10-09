@@ -1,0 +1,9 @@
+[
+  { "method": "GET", "path": "/api/health", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/auth/login", "auth": false, "body": ["email", "password"], "query": [], "login": true },
+  { "method": "GET", "path": "/api/books", "auth": false, "body": null, "query": ["author", "genre", "limit"] },
+  { "method": "GET", "path": "/api/books/{id}", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/books", "auth": true, "body": ["title", "author", "isbn", "year", "genres"], "query": [] },
+  { "method": "PUT", "path": "/api/books/{id}", "auth": true, "body": ["title", "author", "isbn", "year", "genres"], "query": [] },
+  { "method": "DELETE", "path": "/api/books/{id}", "auth": true, "body": null, "query": [] }
+]

@@ -1,0 +1,16 @@
+[
+  { "method": "GET", "path": "/api/health", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/auth/login", "auth": false, "body": ["email", "password"], "query": [], "login": true },
+  { "method": "GET", "path": "/api/users", "auth": true, "body": null, "query": ["page", "limit", "role"] },
+  { "method": "GET", "path": "/api/users/me", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/users", "auth": true, "body": ["email", "username", "password", "role"], "query": [] },
+  { "method": "PUT", "path": "/api/users/{id}", "auth": true, "body": ["email", "username", "role"], "query": [] },
+  { "method": "PATCH", "path": "/api/users/{id}", "auth": true, "body": ["email", "username", "role"], "query": [] },
+  { "method": "DELETE", "path": "/api/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/notes", "auth": true, "body": null, "query": ["q", "tag", "archived", "sort"] },
+  { "method": "GET", "path": "/api/notes/{noteId}", "auth": true, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/notes", "auth": true, "body": ["title", "content", "tags", "archived"], "query": [] },
+  { "method": "PUT", "path": "/api/notes/{noteId}", "auth": true, "body": ["title", "content", "tags", "archived"], "query": [] },
+  { "method": "DELETE", "path": "/api/notes/{noteId}", "auth": true, "body": null, "query": [] }
+]

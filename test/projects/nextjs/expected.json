@@ -1,0 +1,14 @@
+[
+  { "method": "POST", "path": "/api/auth/login", "auth": false, "body": ["email", "password"], "query": [], "login": true },
+  { "method": "GET", "path": "/api/users", "auth": false, "body": null, "query": ["page", "limit", "search"] },
+  { "method": "POST", "path": "/api/users", "auth": true, "body": ["name", "email", "password", "role"], "query": [] },
+  { "method": "GET", "path": "/api/users/{id}", "auth": false, "body": null, "query": [] },
+  { "method": "PUT", "path": "/api/users/{id}", "auth": true, "body": ["name", "email", "role"], "query": [] },
+  { "method": "PATCH", "path": "/api/users/{id}", "auth": true, "body": ["name", "bio"], "query": [] },
+  { "method": "DELETE", "path": "/api/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/audit-logs", "auth": true, "body": null, "query": ["actor", "from"] },
+  { "method": "GET", "path": "/api/settings", "auth": true, "body": null, "query": [] },
+  { "method": "PUT", "path": "/api/settings", "auth": true, "body": ["maintenanceMode", "signupsEnabled", "supportEmail"], "query": [] },
+  { "method": "GET", "path": "/api/legacy/hello", "auth": false, "body": null, "query": ["name"] },
+  { "method": "POST", "path": "/api/legacy/hello", "auth": false, "body": ["name", "greeting"], "query": [] }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "elysia-shop-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "module": "src/index.ts",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun --watch src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/jwt": "^1.2.0",
+    "elysia": "^1.2.25"
+  },
+  "devDependencies": {
+    "bun-types": "^1.1.42",
+    "typescript": "^5.7.2"
+  }
+}

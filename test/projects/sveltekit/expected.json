@@ -1,0 +1,8 @@
+[
+  { "method": "POST", "path": "/api/auth/login", "auth": false, "body": ["email", "password"], "query": [], "login": true },
+  { "method": "GET", "path": "/api/todos", "auth": false, "body": null, "query": ["status", "limit"] },
+  { "method": "POST", "path": "/api/todos", "auth": true, "body": ["title", "dueDate"], "query": [] },
+  { "method": "GET", "path": "/api/todos/{id}", "auth": false, "body": null, "query": [] },
+  { "method": "PATCH", "path": "/api/todos/{id}", "auth": true, "body": ["title", "done", "dueDate"], "query": [] },
+  { "method": "DELETE", "path": "/api/todos/{id}", "auth": true, "body": null, "query": [] }
+]

@@ -1,0 +1,33 @@
+{
+  "name": "adonis-api-fixture",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node bin/server.js",
+    "dev": "node ace serve --hmr"
+  },
+  "imports": {
+    "#controllers/*": "./app/controllers/*.js",
+    "#exceptions/*": "./app/exceptions/*.js",
+    "#models/*": "./app/models/*.js",
+    "#validators/*": "./app/validators/*.js",
+    "#middleware/*": "./app/middleware/*.js",
+    "#start/*": "./start/*.js",
+    "#config/*": "./config/*.js"
+  },
+  "dependencies": {
+    "@adonisjs/auth": "^9.3.0",
+    "@adonisjs/core": "^6.17.0",
+    "@adonisjs/cors": "^2.2.1",
+    "@adonisjs/lucid": "^21.5.1",
+    "@vinejs/vine": "^3.0.0",
+    "luxon": "^3.5.0",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@adonisjs/tsconfig": "^1.4.0",
+    "@types/luxon": "^3.4.2",
+    "typescript": "~5.7.2"
+  }
+}

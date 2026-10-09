@@ -1,0 +1,22 @@
+[
+  { "method": "GET", "path": "/health", "auth": false, "body": null, "query": [] },
+
+  { "method": "POST", "path": "/api/auth/register", "auth": false, "body": ["email", "username", "password", "name"], "query": [] },
+  { "method": "POST", "path": "/api/auth/login", "auth": false, "body": ["email", "password"], "query": [], "login": true },
+  { "method": "GET", "path": "/api/auth/me", "auth": true, "body": null, "query": [] },
+
+  { "method": "GET", "path": "/api/projects", "auth": true, "body": null, "query": ["search", "archived"] },
+  { "method": "POST", "path": "/api/projects", "auth": true, "body": ["name", "description", "color"], "query": [] },
+  { "method": "GET", "path": "/api/projects/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "PUT", "path": "/api/projects/{id}", "auth": true, "body": ["name", "description", "color", "archived"], "query": [] },
+  { "method": "DELETE", "path": "/api/projects/{id}", "auth": true, "body": null, "query": [] },
+
+  { "method": "GET", "path": "/api/projects/{projectId}/tasks", "auth": true, "body": null, "query": ["status", "priority", "page", "pageSize"] },
+  { "method": "POST", "path": "/api/projects/{projectId}/tasks", "auth": true, "body": ["title", "description", "status", "priority", "dueDate", "assigneeId"], "query": [] },
+  { "method": "GET", "path": "/api/projects/{projectId}/tasks/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "PATCH", "path": "/api/projects/{projectId}/tasks/{id}", "auth": true, "body": ["title", "description", "status", "priority", "dueDate", "assigneeId"], "query": [] },
+  { "method": "DELETE", "path": "/api/projects/{projectId}/tasks/{id}", "auth": true, "body": null, "query": [] },
+
+  { "method": "GET", "path": "/api/admin/stats", "auth": true, "scheme": "apikey", "body": null, "query": [] },
+  { "method": "GET", "path": "/api/admin/users", "auth": true, "scheme": "apikey", "body": null, "query": ["role"] }
+]

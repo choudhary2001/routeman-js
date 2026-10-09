@@ -1,0 +1,70 @@
+{
+  "name": "routeman",
+  "version": "0.1.0",
+  "description": "Generate a complete Postman collection from your Node.js, Bun or Deno API (Express, Fastify, NestJS, Koa, Hono, Elysia, Hapi, Next.js, Nuxt, SvelteKit, AdonisJS and more) with one command. No OpenAPI, decorators or running server needed.",
+  "keywords": [
+    "postman",
+    "postman-collection",
+    "api",
+    "openapi",
+    "express",
+    "fastify",
+    "nestjs",
+    "koa",
+    "hono",
+    "elysia",
+    "hapi",
+    "nextjs",
+    "nuxt",
+    "sveltekit",
+    "adonisjs",
+    "bun",
+    "deno",
+    "cli",
+    "rest",
+    "api-documentation",
+    "newman"
+  ],
+  "homepage": "https://github.com/choudhary2001/routeman-js#readme",
+  "bugs": {
+    "url": "https://github.com/choudhary2001/routeman-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choudhary2001/routeman-js.git"
+  },
+  "license": "MIT",
+  "author": "Shwastik Tech Solutions Pvt Ltd <contact@swastik.ai> (https://swastik.ai)",
+  "type": "module",
+  "bin": {
+    "routeman": "bin/routeman.js"
+  },
+  "main": "./src/index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "vendor/",
+    "index.d.ts",
+    "schema.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18.3"
+  },
+  "scripts": {
+    "test": "node --test test/units.test.js test/projects.test.js",
+    "test:e2e": "node test/e2e.js",
+    "test:projects": "node --test test/projects.test.js"
+  },
+  "sideEffects": false
+}

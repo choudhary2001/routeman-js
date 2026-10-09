@@ -1,0 +1,23 @@
+[
+  { "method": "GET", "path": "/health", "auth": false, "body": null, "query": [] },
+
+  { "method": "POST", "path": "/api/auth/login", "auth": false, "body": ["email", "password"], "query": [], "login": true },
+  { "method": "POST", "path": "/api/auth/register", "auth": false, "body": ["email", "username", "password", "name"], "query": [] },
+
+  { "method": "GET", "path": "/api/users", "auth": true, "body": null, "query": ["page", "limit", "search"] },
+  { "method": "GET", "path": "/api/users/me", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/users", "auth": true, "body": ["email", "username", "password", "name", "role"], "query": [] },
+  { "method": "PATCH", "path": "/api/users/{id}", "auth": true, "body": ["email", "name", "bio"], "query": [] },
+  { "method": "DELETE", "path": "/api/users/{id}", "auth": true, "body": null, "query": [] },
+
+  { "method": "GET", "path": "/api/articles", "auth": false, "body": null, "query": ["page", "limit", "tag", "author"] },
+  { "method": "GET", "path": "/api/articles/{id}", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/articles", "auth": true, "body": ["title", "body", "tags", "published"], "query": [] },
+  { "method": "PUT", "path": "/api/articles/{id}", "auth": true, "body": ["title", "body", "tags", "published"], "query": [] },
+  { "method": "DELETE", "path": "/api/articles/{id}", "auth": true, "body": null, "query": [] },
+
+  { "method": "GET", "path": "/api/articles/{articleId}/comments", "auth": true, "body": null, "query": ["limit", "order"] },
+  { "method": "POST", "path": "/api/articles/{articleId}/comments", "auth": true, "body": ["body"], "query": [] },
+  { "method": "DELETE", "path": "/api/articles/{articleId}/comments/{commentId}", "auth": true, "body": null, "query": [] }
+]

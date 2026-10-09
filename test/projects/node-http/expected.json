@@ -1,0 +1,10 @@
+[
+  { "method": "GET", "path": "/health", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/auth/login", "auth": false, "body": ["username", "password"], "query": [], "login": true },
+  { "method": "GET", "path": "/api/todos", "auth": false, "body": null, "query": ["completed", "search", "page", "per_page"] },
+  { "method": "POST", "path": "/api/todos", "auth": true, "body": ["title", "completed", "priority", "dueDate"], "query": [] },
+  { "method": "GET", "path": "/api/todos/{id}", "auth": false, "body": null, "query": [] },
+  { "method": "PUT", "path": "/api/todos/{id}", "auth": true, "body": ["title", "completed", "priority", "dueDate"], "query": [] },
+  { "method": "PATCH", "path": "/api/todos/{id}", "auth": true, "body": ["title", "completed", "priority", "dueDate"], "query": [] },
+  { "method": "DELETE", "path": "/api/todos/{id}", "auth": true, "body": null, "query": [] }
+]

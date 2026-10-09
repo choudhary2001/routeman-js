@@ -1,0 +1,16 @@
+[
+  { "method": "POST", "path": "/api/auth/register", "auth": false, "body": ["name", "email", "password", "role", "age"], "query": [] },
+  { "method": "POST", "path": "/api/auth/login", "auth": false, "body": ["email", "password"], "query": [], "login": true },
+  { "method": "GET", "path": "/api/users", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/products", "auth": false, "body": null, "query": ["category", "minPrice"] },
+  { "method": "POST", "path": "/api/products", "auth": true, "body": ["name", "description", "price", "category", "stock", "tags", "isActive", "createdBy"], "query": [] },
+  { "method": "PUT", "path": "/api/products/{id}", "auth": true, "body": ["name", "description", "price", "category", "stock", "tags", "isActive", "createdBy"], "query": [] },
+  { "method": "DELETE", "path": "/api/products/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/orders", "auth": true, "body": null, "query": ["status"] },
+  { "method": "POST", "path": "/api/orders", "auth": true, "body": ["customerEmail", "items", "total", "currency", "status", "shippingAddress", "notes"], "query": [] },
+  { "method": "GET", "path": "/api/orders/{orderId}", "auth": true, "body": null, "query": [] },
+  { "method": "PATCH", "path": "/api/orders/{orderId}", "auth": true, "body": ["customerEmail", "items", "total", "currency", "status", "shippingAddress", "notes"], "query": [] },
+  { "method": "POST", "path": "/api/customers", "auth": false, "body": ["firstName", "lastName", "email", "phone", "tier", "marketingOptIn"], "query": [] },
+  { "method": "GET", "path": "/api/customers/{id}", "auth": false, "body": null, "query": [] }
+]

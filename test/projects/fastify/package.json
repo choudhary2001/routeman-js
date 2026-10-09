@@ -1,0 +1,21 @@
+{
+  "name": "fastify-blog-api",
+  "version": "1.0.0",
+  "description": "Blog API built with Fastify 5",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fastify/autoload": "^6.3.0",
+    "@fastify/jwt": "^9.1.0",
+    "@sinclair/typebox": "^0.34.33",
+    "fastify": "^5.3.3",
+    "fastify-plugin": "^5.0.1"
+  }
+}

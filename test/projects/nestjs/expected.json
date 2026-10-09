@@ -1,0 +1,19 @@
+[
+  { "method": "GET", "path": "/api/v1/health", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/v1/auth/login", "auth": false, "body": ["email", "password"], "query": [], "login": true },
+  { "method": "POST", "path": "/api/v1/auth/register", "auth": false, "body": ["email", "username", "password"], "query": [] },
+  { "method": "GET", "path": "/api/v1/auth/profile", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/v1/users", "auth": true, "body": null, "query": ["page", "limit"] },
+  { "method": "GET", "path": "/api/v1/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/v1/users", "auth": true, "body": ["email", "username", "password", "fullName", "role", "address"], "query": [] },
+  { "method": "PATCH", "path": "/api/v1/users/{id}", "auth": true, "body": ["email", "username", "password", "fullName", "role", "address"], "query": [] },
+  { "method": "DELETE", "path": "/api/v1/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/v1/users/{id}/avatar", "auth": true, "body": ["avatar"], "query": [] },
+  { "method": "GET", "path": "/api/v1/products", "auth": false, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/v2/products", "auth": false, "body": null, "query": ["search", "category"] },
+  { "method": "GET", "path": "/api/v2/products/{id}", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/v2/products", "auth": true, "body": ["sku", "name", "description", "price", "category", "stock", "tags"], "query": [] },
+  { "method": "PATCH", "path": "/api/v2/products/{id}", "auth": true, "body": ["name", "description", "price", "category", "stock", "tags"], "query": [] },
+  { "method": "PATCH", "path": "/api/v2/products/{id}/stock", "auth": true, "body": ["stock"], "query": [] },
+  { "method": "DELETE", "path": "/api/v2/products/{id}", "auth": true, "body": null, "query": [] }
+]

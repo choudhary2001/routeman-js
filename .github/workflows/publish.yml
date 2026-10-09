@@ -1,0 +1,23 @@
+# Publishes to npm when a tag like v0.1.0 is pushed.
+# One-time setup: add an NPM_TOKEN repository secret (an npm "automation" token), or configure
+# npm trusted publishing for this repository and drop the NODE_AUTH_TOKEN line.
+name: publish
+on:
+  push:
+    tags: ["v*"]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - run: node --test test/units.test.js test/projects.test.js
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

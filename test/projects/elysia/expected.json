@@ -1,0 +1,21 @@
+[
+  { "method": "GET", "path": "/health", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/auth/register", "auth": false, "body": ["email", "username", "password", "fullName"], "query": [] },
+  { "method": "POST", "path": "/api/auth/login", "auth": false, "body": ["email", "password"], "query": [], "login": true },
+  { "method": "GET", "path": "/api/users", "auth": true, "body": null, "query": ["page", "limit", "role"] },
+  { "method": "GET", "path": "/api/users/me", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "PATCH", "path": "/api/users/{id}", "auth": true, "body": ["email", "fullName", "role"], "query": [] },
+  { "method": "DELETE", "path": "/api/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/products", "auth": false, "body": null, "query": ["category", "search", "minPrice", "maxPrice", "sort"] },
+  { "method": "GET", "path": "/api/products/{id}", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/products", "auth": true, "body": ["name", "description", "price", "stock", "category"], "query": [] },
+  { "method": "PUT", "path": "/api/products/{id}", "auth": true, "body": ["name", "description", "price", "stock", "category"], "query": [] },
+  { "method": "DELETE", "path": "/api/products/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/products/{id}/image", "auth": true, "body": ["image"], "query": [] },
+  { "method": "GET", "path": "/api/orders", "auth": true, "body": null, "query": ["status"] },
+  { "method": "GET", "path": "/api/orders/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/orders", "auth": true, "body": ["items", "shippingAddress", "note"], "query": [] },
+  { "method": "PATCH", "path": "/api/orders/{id}/status", "auth": true, "body": ["status"], "query": [] },
+  { "method": "POST", "path": "/api/orders/{id}/cancel", "auth": true, "body": null, "query": [] }
+]

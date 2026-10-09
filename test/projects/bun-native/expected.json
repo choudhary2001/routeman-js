@@ -1,0 +1,10 @@
+[
+  { "method": "GET", "path": "/api/health", "auth": false, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/status", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/auth/login", "auth": false, "body": ["email", "username", "password"], "query": [], "login": true },
+  { "method": "GET", "path": "/api/items", "auth": false, "body": null, "query": ["q", "category", "limit"] },
+  { "method": "POST", "path": "/api/items", "auth": true, "body": ["name", "description", "price", "quantity", "category"], "query": [] },
+  { "method": "GET", "path": "/api/items/{id}", "auth": false, "body": null, "query": [] },
+  { "method": "PUT", "path": "/api/items/{id}", "auth": true, "body": ["name", "description", "price", "quantity", "category"], "query": [] },
+  { "method": "DELETE", "path": "/api/items/{id}", "auth": true, "body": null, "query": [] }
+]

@@ -1,0 +1,11 @@
+[
+  { "method": "GET", "path": "/healthz", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/auth/login", "auth": false, "body": ["email", "password"], "query": [], "login": true },
+  { "method": "GET", "path": "/api/users", "auth": false, "body": null, "query": ["page", "limit"] },
+  { "method": "GET", "path": "/api/users/{id}", "auth": false, "body": null, "query": [] },
+  { "method": "POST", "path": "/api/users", "auth": true, "body": ["name", "email", "password", "age"], "query": [] },
+  { "method": "PUT", "path": "/api/users/{id}", "auth": true, "body": ["name", "email", "age"], "query": [] },
+  { "method": "DELETE", "path": "/api/users/{id}", "auth": true, "body": null, "query": [] },
+  { "method": "GET", "path": "/api/orders", "auth": true, "body": null, "query": ["status", "page"] },
+  { "method": "POST", "path": "/api/orders", "auth": true, "body": ["productId", "quantity", "note"], "query": [] }
+]
