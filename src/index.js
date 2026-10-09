@@ -1,6 +1,6 @@
 // Programmatic API.
 //
-//   import { generate } from 'routeman';
+//   import { generate } from 'routeman-cli';
 //   const { collection, environments, api } = await generate({ project: '.' });
 import fs from 'node:fs';
 import path from 'node:path';

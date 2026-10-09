@@ -1,5 +1,5 @@
 {
-  "name": "routeman",
+  "name": "routeman-cli",
   "version": "0.1.0",
   "description": "Generate a complete Postman collection from your Node.js, Bun or Deno API (Express, Fastify, NestJS, Koa, Hono, Elysia, Hapi, Next.js, Nuxt, SvelteKit, AdonisJS and more) with one command. No OpenAPI, decorators or running server needed.",
   "keywords": [
@@ -37,7 +37,8 @@
   "author": "Shwastik Tech Solutions Pvt Ltd <contact@swastik.ai> (https://swastik.ai)",
   "type": "module",
   "bin": {
-    "routeman": "bin/routeman.js"
+    "routeman": "bin/routeman.js",
+    "routeman-cli": "bin/routeman.js"
   },
   "main": "./src/index.js",
   "types": "./index.d.ts",

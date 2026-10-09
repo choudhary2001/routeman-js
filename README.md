@@ -5,7 +5,7 @@ Works with Express, Fastify, NestJS, Koa, Hono, Elysia, Hapi, Next.js, Nuxt, Sve
 You don't need OpenAPI, Swagger decorators or a running server.**
 
 ```bash
-npx routeman            # or: pnpm dlx routeman · yarn dlx routeman · bunx routeman · deno run -A npm:routeman
+npx routeman-cli        # or: pnpm dlx routeman-cli · yarn dlx routeman-cli · bunx routeman-cli · deno run -A npm:routeman-cli
 ```
 
 ```
@@ -31,11 +31,13 @@ Made by [Shwastik Tech Solutions Pvt Ltd](https://swastik.ai). Also available fo
 
 | Package manager | One-off run | Install as a dev dependency |
 |---|---|---|
-| npm | `npx routeman` | `npm i -D routeman` |
-| pnpm | `pnpm dlx routeman` | `pnpm add -D routeman` |
-| yarn | `yarn dlx routeman` | `yarn add -D routeman` |
-| bun | `bunx routeman` | `bun add -d routeman` |
-| deno | `deno run -A npm:routeman` | - |
+| npm | `npx routeman-cli` | `npm i -D routeman-cli` |
+| pnpm | `pnpm dlx routeman-cli` | `pnpm add -D routeman-cli` |
+| yarn | `yarn dlx routeman-cli` | `yarn add -D routeman-cli` |
+| bun | `bunx routeman-cli` | `bun add -d routeman-cli` |
+| deno | `deno run -A npm:routeman-cli` | - |
+
+Once installed, the command is `routeman` (for example `npx routeman routes`, or a `"postman": "routeman"` script).
 
 Requires Node.js 18.3 or newer (or Bun or Deno). **Zero dependencies**: the package is about 600 kB and installs
 in about a second.
@@ -125,7 +127,7 @@ Command-line options override the file.
 ## Programmatic API
 
 ```js
-import { generate, write } from 'routeman';
+import { generate, write } from 'routeman-cli';
 
 const result = await generate({ project: '.', environments: { staging: 'https://staging.example.com' } });
 console.log(result.api.routes.length, 'routes');

@@ -82,7 +82,7 @@ export function load(root) {
 
 export function dump(cfg) {
   const out = {
-    $schema: 'https://unpkg.com/routeman/schema.json',
+    $schema: 'https://unpkg.com/routeman-cli/schema.json',
     name: cfg.name,
     framework: cfg.framework || 'auto',
     ...(cfg.entry && cfg.entry.length ? { entry: cfg.entry } : {}),
